@@ -21,7 +21,7 @@ const editor = new EditorJS({
             class: Header,
             inlineToolbar: ["link", "bold", "italic"],
             config: {
-                levels: [2, 3, 4],
+                levels: [1, 2, 3, 4, 5],
                 defaultLevel: 3,
             },
         },
