@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>メモパッド</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Text Editor</h1>
+            <div class="functions">
+                <div class="toggle">
+                    <input id="dark-mode" type="checkbox" />
+                </div>
+                <button id="save">保存</button>
+                <button id="download">ダウンロード</button>
+                <label for="upload">
+                    インポート
+                    <input id="upload" type="file" accept=".json" style="display: none;"/>
+                </label>
+            </div>
+        </header>
+        <section id="editor">
+            <div class="editor-wrapper">
+                <input type="text" id="title" placeholder="タイトルを入力..." />
+                <div id="editorjs"></div>
+            </div>
+        </section>
+        <footer>
+            <span id="charCount">0文字</span>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- Editor.js 本体 -->
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+        <!-- Editor.js プラグイン -->
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/inline-code@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/table@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/raw@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/warning@latest"></script>
+        <!-- 自作スクリプト -->
+        <script src="./js/editor.js"></script>
+    </body>
+</html>
