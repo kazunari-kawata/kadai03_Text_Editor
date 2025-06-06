@@ -37,8 +37,19 @@ const editor = new EditorJS({
             inlineToolbar: ["link", "bold", "italic"],
         },
         embed: {
-            class: Embed,
+            class: window.Embed,
             inlineToolbar: true,
+            config: {
+                services: {
+                    youtube: true,
+                    facebook: true,
+                    instagram: true,
+                    twitter: true,
+                    vimeo: true,
+                    pinterest: true,
+                    gist: true,
+                },
+            },
         },
         image: {
             class: ImageTool,
@@ -133,6 +144,7 @@ $("#save").on("click", () => {
     editor
         .save()
         .then((outputData) => {
+            console.log("保存されたデータ:", outputData);
             const fullData = {
                 title: title,
                 content: outputData.blocks,
